@@ -1,12 +1,17 @@
 const URL = "https://api.staging.fourthwall.com/api/mailing-list";
+
+// Form and respose HTML element
 const formElement = document.querySelector("form");
 const responseElement = document.querySelector("#responses");
 
+// Event listener when form is submitted
 formElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
   const inputElement = formElement.querySelector("input");
 
   if (inputElement.value) {
+    // Reques options and body
+
     const options = {
       method: "POST",
       headers: {
@@ -19,6 +24,7 @@ formElement.addEventListener("submit", (evt) => {
     responseElement.classList.remove("form__message--error");
     responseElement.innerText = "Submitting...";
 
+    // Request with fetch API
     fetch(URL, options)
       .then((response) => response.json())
       .then((data) => {
