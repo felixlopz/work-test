@@ -1,0 +1,57 @@
+.input {
+  position: relative;
+  transition: border-color 200ms;
+  border: 2px solid $primary-border;
+  border-radius: 12px;
+  width: 39rem;
+  height: 64px;
+  background-color: $primary-darker;
+  cursor: text;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+
+  &:focus-within {
+    border-color: rgba(0, 0, 0, 0.26);
+  }
+
+  &__label,
+  &__input {
+    padding: 0 1em;
+    font-size: 1.5rem;
+  }
+
+  &__label {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.72);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-in 0.1s;
+  }
+
+  &__input {
+    background-color: $primary-darker;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    font-family: inherit;
+    font-weight: inherit;
+
+    // Trick for making the floating label
+    &:not(:placeholder-shown)+label,
+    &:focus+label {
+      font-size: 1.3rem;
+      transform: translateY(-120%);
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+  }
+
+}
