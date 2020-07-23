@@ -1,0 +1,13 @@
+.form {
+
+  &__message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: block;
+
+    &--error {
+      color: red;
+    }
+  }
+}
