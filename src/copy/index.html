@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Copy Me</title>
-	<link rel="stylesheet" type="text/css" href="css/main.min.css">
-</head>
-<body>
-	<h1>Gulp Boilerplate</h1>
-	<!-- Scripts -->
-	<script src="js/main.polyfills.min.js"></script>
-	<script src="js/main.min.js"></script>
-</body>
+  <head>
+    <title>Test Project</title>
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+  </head>
+  <body>
+    <!-- Scripts -->
+    <div class="container">
+      <h3 class="heading">Join the mailing list</h3>
+      <form class="form">
+        <div class="form__response-container">
+          <div
+            data-form="response-error"
+            class="form__response form__response--spacing-bottom"
+          >
+            <div class="alert alert--error">
+              <ul data-form="response-error-content" class="alert__list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="input input--small input--inline-button">
+          <input
+            id="newsletter-email"
+            type="email"
+            class="input__input"
+            required
+            placeholder=" "
+          />
+
+          <label for="newsletter-email" class="input__label">
+            Your email
+          </label>
+
+          <div class="input__button">
+            <button type="submit" class="button button--primary button--input">
+              Subscribe
+              <span class="button__spinner">
+                <div class="spinner spinner--small spinner--light"></div>
+              </span>
+            </button>
+          </div>
+        </div>
+        <span class="form__message"></span>
+      </form>
+    </div>
+    <script src="js/main.polyfills.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
